@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Reputable - World of Warcraft Reputation Tracker</title>
+		<link rel="shortcut icon" href="favicon.ico"/>
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css"/>
+		<link rel="stylesheet" href="css/normalize-8.0.0.min.css"/>
+		<link rel="stylesheet" href="css/base.min.css"/>
+		<script src="js/jquery-3.3.1.min.js"></script>
+		<script src="js/core.min.js"></script>
+	</head>
+	<body>
+		<div id="background"></div>
+		<div id="header">
+			<label class="input-label" for="field-realm">Realm</label><div id="realm-drop-container"><input id="field-realm" class="input-field" data-tab="field-character"/><div id="realm-drop"></div></div>
+			<label class="input-label" for="field-character">Character</label><input id="field-character" class="input-field" data-tab="button-search" maxlength="12"/>
+			<input class="input-button" type="button" id="button-search" value="Lookup"/>
+		</div>
+		<div id="status"><span></span></div>
+		<div id="reputation-display"></div>
+		<div id="footer">
+			<div class="nav link" data-link="https://twitter.com/intent/tweet?text=%40Kruithne%20%23WarcraftReputable%20%5BType%20your%20feedback%20here!%5D">Feedback</div>
+			<div class="nav link" data-link="https://github.com/Kruithne/wow-reputable">Contribute</div>
+			<div class="nav link" data-link="https://paypal.me/kruithne">Donate</div>
+		</div>
+	</body>
+</html>

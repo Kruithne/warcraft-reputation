@@ -477,9 +477,11 @@ $(function() {
 				$.get('guides/' + guide.attr('data-guide') + '.html', function(data) {
 					guide.empty().html(data);
 
+					var guideContent = guide.find('.guide').first();
+
 					// Add reputation bar to the top.
-					var reputationHeader = $('<h1/>').text('Standing').addClass('reputation-header').appendTo(guide);
-					var reputationBar = guide.createFrame('reputation-pct-bar');
+					var reputationBar = $('<div/>').prependTo(guideContent).addClass('repuation-pct-bar');
+					var reputationHeader = $('<h1/>').text('Standing').addClass('reputation-header').prependTo(guideContent);
 					var reputationBarInner = reputationBar.createFrame('inner');
 					var reputationBarText = reputationBar.createFrame('shadow');
 

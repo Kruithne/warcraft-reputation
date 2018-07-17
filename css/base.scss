@@ -1,0 +1,542 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+*:focus {
+	outline: 0;
+}
+
+body {
+	background: black;
+	overflow-x: hidden;
+	font-family: 'Open Sans', sans-serif;
+}
+
+#background {
+	display: none;
+	background: no-repeat center;
+	background-size: cover;
+	filter: blur(8px);
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+
+#header {
+	top: 0;
+}
+
+#footer {
+	bottom: 0;
+
+	.nav {
+		font-size: 1.2em;
+		margin: 0 30px;
+		cursor: pointer;
+		border-bottom: 1px solid rgba(255, 255, 255, 0);
+		padding: 5px 0;
+	}
+}
+
+#header, #footer, #status {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 100px;
+	background: rgba(0, 0, 0, 0.81);
+	color: white;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 50;
+}
+
+#status {
+	display: none;
+	top: 100px;
+	background: rgba(0, 0, 0, 0.81);
+	height: 50px;
+	z-index: 49;
+
+	&.error {
+		background: rgba(255, 2, 2, 0.22);
+	}
+
+	&.pending {
+		background: rgba(255, 163, 2, 0.2);
+	}
+}
+
+#navigation .nav:hover {
+	border-color: white;
+}
+
+.input-label {
+	border-bottom-left-radius: 10px;
+	border-top-left-radius: 10px;
+	background: #16741e;
+	color: white;
+	margin-left: 15px;
+	padding: 13px 12px 16px;
+}
+
+.input-field {
+	padding: 12px;
+	border-bottom-right-radius: 10px;
+	border-top-right-radius: 10px;
+	border: 3px solid #16741e;
+	border-left: 0;
+
+	&:focus {
+		border-color: #3f9f47;
+	}
+}
+
+.input-button {
+	padding: 14px 20px;
+	background: #16741e;
+	border: 0;
+	border-radius: 10px;
+	color: white;
+	margin-left: 15px;
+	cursor: pointer;
+}
+
+.input-button:hover, .input-label.selected {
+	background: #3f9f47;
+}
+
+#realm-drop-container {
+	position: relative;
+}
+
+#field-realm.activated {
+	border-bottom-right-radius: 0;
+}
+
+#realm-drop {
+	display: none;
+	position: absolute;
+	background: white;
+	border: 3px solid #16741e;
+	border-top: 0;
+	left: -3px;
+	transform: translateY(-3px);
+	right: 0;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+	z-index: 51;
+}
+
+.realm-header {
+	background-color: #16741e;
+	font-weight: bold;
+}
+
+.realm-header, .realm-option {
+	padding: 7px;
+	color: black;
+}
+
+.realm-option {
+	font-size: 0.9em;
+}
+
+.realm-option:hover {
+	background-color: #3f9f47;
+	cursor: pointer;
+}
+
+.item-border {
+	width: 100%;
+	height: 100%;
+	background: url(../images/item-border.png) no-repeat center center;
+	background-size: contain;
+}
+
+#modifier-frame {
+	display: flex;
+	flex-direction: row;
+	max-width: 960px;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin-bottom: 40px;
+
+	.modifier {
+		background: #d9f3d91a;
+		border-radius: 10px;
+		display: flex;
+		flex-direction: row;
+		width: 310px;
+		padding: 10px 0;
+		font-size: 0.8em;
+		margin: 5px;
+		align-items: center;
+		cursor: pointer;
+
+		&:hover, &.selected {
+			background: #d9f3d94d;
+		}
+
+		.icon {
+			width: 36px;
+			height: 36px;
+			margin: 0 10px;
+			background: no-repeat 3px 3px;
+			background-size: 30px 30px;
+		}
+
+		.text {
+			.title {
+				font-weight: bold;
+				display: block;
+				color: white;
+
+				.pct {
+					margin-left: 5px;
+					opacity: 0.7;
+					display: inline;
+				}
+			}
+
+			.description {
+				font-style: italic;
+				display: block;
+				color: silver;
+			}
+		}
+	}
+}
+
+#reputation-display {
+	position: fixed;
+	top: 100px;
+	bottom: 100px;
+	overflow-y: auto;
+	overflow-x: hidden;
+	-webkit-overflow-scrolling: touch;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	.padder {
+		min-height: 20px;
+		color: rgba(0, 0, 0, 0);
+	}
+
+	.reputation-container {
+		width: 90%;
+		max-width: 920px;
+		margin-bottom: 20px;
+
+		.reputation {
+			background: linear-gradient(to bottom,#3db618 0,#187420 100%);
+			border-radius: 10px;
+			box-shadow: black 0 0 10px;
+			width: 100%;
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			justify-content: space-between;
+			overflow: hidden;
+			height: 40px;
+			position: relative;
+			cursor: pointer;
+
+			&.incomplete {
+				background: linear-gradient(to bottom, #b68218 0, #743f18 100%);
+			}
+
+			.reputation-icon {
+				width: 150px;
+				height: 100%;
+				background: no-repeat center center;
+				position: absolute;
+				mask-image: linear-gradient(to left, transparent 25%, black 75%);
+			}
+
+			.reputation-title {
+				text-align: left;
+				width: 100%;
+				color: white;
+				font-weight: bold;
+				text-shadow: 1px 1px 5px black;
+				margin-left: 120px;
+			}
+
+			.reputation-status {
+				margin-right: 15px;
+				color: white;
+				font-weight: bold;
+				text-shadow: 1px 1px 5px black;
+
+				&::after {
+					content: '\25BC';
+					margin-left: 10px;
+				}
+			}
+
+			&.expanded .reputation-status::after {
+				content: '\25B2';
+			}
+		}
+
+		.reputation-guide-container {
+			display: none;
+			width: 95%;
+			margin: 0 auto;
+			background: rgba(0, 0, 0, 0.7);
+			box-shadow: black 0 0 10px;
+			border-bottom-right-radius: 10px;
+			border-bottom-left-radius: 10px;
+			padding: 20px 0;
+
+			.reputation-guide-text {
+				width: 100%;
+				color: white;
+				font-size: 1.2em;
+				text-align: center;
+			}
+
+			.guide {
+				color: white;
+				padding: 0 20px;
+
+				.reputation-pct-bar {
+					margin-bottom: 20px;
+				}
+
+				.step {
+					width: 95%;
+					margin: 15px auto 0;
+
+					&.complete .step-header {
+						color: #2fb92f;
+					}
+
+					.step-contents {
+						display: none;
+					}
+
+					&.expanded {
+						.step-header::after {
+							content: '\25B2';
+						}
+
+						.step-contents {
+							display: block;
+						}
+					}
+				}
+
+				h1, h2 {
+					font-size: 1.2em;
+					margin: 0 0 10px 0;
+				}
+
+				h2 {
+					margin-top: 10px;
+				}
+
+				.step-header {
+					font-size: 1em;
+					font-weight: bold;
+					margin-bottom: 5px;
+					cursor: pointer;
+
+					&::after {
+						content: '\25BC';
+						margin-left: 10px;
+					}
+				}
+
+				.rewards {
+					list-style: none;
+
+					.reward {
+						display: inline-block;
+						width: 36px;
+						height: 36px;
+						margin: 0 5px;
+						background: no-repeat 3px 3px;
+						background-size: 30px 30px;
+						position: relative;
+
+						a {
+							position: absolute;
+							width: 100%;
+							height: 100%;
+							top: 0;
+						}
+					}
+				}
+
+				.note {
+					margin: 20px;
+					font-style: italic;
+				}
+
+				.option {
+					width: 95%;
+					margin: 15px auto auto;
+
+					h4 {
+						margin-top: 15px;
+						background-repeat: no-repeat;
+						background-size: contain;
+						padding-left: 25px;
+					}
+
+					.header-dungeon {
+						background-image: url(../images/header-dungeon.png);
+					}
+
+					.header-daily {
+						background-image: url(../images/header-daily.png);
+					}
+
+					.header-quest {
+						background-image: url(../images/header-quest.png);
+					}
+
+					.header-pvp {
+						background-image: url(../images/header-pvp.png);
+					}
+
+					.header-vendor {
+						background-image: url(../images/header-vendor.png);
+					}
+
+					.header-fishing {
+						background-image: url(../images/header-fishing.png);
+					}
+
+					p {
+						margin-top: 15px;
+						color: #f7ffc4;
+					}
+
+					.breakdown {
+						margin-top: 15px;
+						padding: 0 40px;
+						list-style: circle;
+						color: #f7ffc4;
+					}
+
+					[data-value] {
+						font-weight: bold;
+					}
+
+					b, a {
+						color: gold;
+						text-decoration: none;
+					}
+
+					[data-total] {
+						color: grey;
+					}
+				}
+			}
+		}
+	}
+}
+
+#main-reputation-bar {
+	width: 95%;
+	max-width: 1020px;
+}
+
+.reputation-pct-bar {
+	height: 40px;
+	min-height: 40px;
+	margin: 20px 50px 40px;
+	position: relative;
+	background: rgba(0, 0, 0, 0.6);
+	border-radius: 10px;
+	box-shadow: black 0 0 10px;
+
+	.inner {
+		background: linear-gradient(to bottom,#38ec00 0,#099615 100%);
+		position: absolute;
+		z-index: 0;
+		top: 0;
+		bottom: 0;
+		border-radius: 10px;
+	}
+
+	.shadow {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		font-weight: bold;
+		color: white;
+		text-shadow: 1px 1px 5px black;
+		z-index: 1;
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		border-radius: 10px;
+	}
+}
+
+.tooltip {
+	position: relative;
+
+	&::after {
+		position: absolute;
+		z-index: 1000000;
+		display: inline-block;
+		padding: 10px;
+		-webkit-font-smoothing: subpixel-antialiased;
+		color: white;
+		text-align: center;
+		letter-spacing: normal;
+		word-wrap: break-word;
+		white-space: pre;
+		pointer-events: none;
+		content: attr(data-title);
+		background: black;
+		border-radius: 5px;
+		right: 50%;
+		bottom: 100%;
+		margin-bottom: 6px;
+	}
+
+	&::before {
+		position: absolute;
+		z-index: 1000001;
+		display: inline-block;
+		width: 0;
+		height: 0;
+		color: black;
+		pointer-events: none;
+		content: "";
+		border: 6px solid transparent;
+		top: -7px;
+		right: 50%;
+		bottom: auto;
+		margin-right: -6px;
+		border-top-color: black;
+	}
+}
+
+.tooltip-right::after {
+	right: auto;
+	left: 50%;
+	margin-left: -20px;
+}
+
+.tooltip-left::after {
+	margin-right: -20px;
+}
+
+.tooltip-top::after {
+	transform: translateX(50%);
+}

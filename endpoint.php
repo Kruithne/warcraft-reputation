@@ -45,6 +45,10 @@
 
 						break;
 
+					case 'roster':
+						$response->reputations = file_get_json(__DIR__ . '/data/reputations.json');
+						break;
+
 					default:
 						$response->setError('ERR_INV_ACTION', 'Invalid request action.');
 						break;

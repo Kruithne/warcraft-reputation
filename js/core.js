@@ -477,6 +477,12 @@ $(function() {
 				$.get('guides/' + guide.attr('data-guide') + '.html', function(data) {
 					guide.empty().html(data);
 
+					// Add reputation bar to the top.
+					var reputationHeader = $('<h1/>').text('Standing').addClass('reputation-header').appendTo(guide);
+					var reputationBar = guide.createFrame('reputation-pct-bar');
+					var reputationBarInner = reputationBar.createFrame('inner');
+					var reputationBarText = reputationBar.createFrame('shadow');
+
 					var reputation = rosterData[parseInt(guide.attr('data-reputation-index'))];
 					var playerState = characterReputations[reputation.id];
 
@@ -509,12 +515,7 @@ $(function() {
 						}
 					}
 
-					var reputationHeader = guide.find('.reputation-header').first();
 					reputationHeader.text(reputationHeader.text() + ' (' + standingRank + ')');
-
-					var reputationBar = guide.find('.reputation-pct-bar').first();
-					var reputationBarInner = reputationBar.find('.inner');
-					var reputationBarText = reputationBar.find('.shadow');
 
 					var pct = (playerRep / totalRep) * 100;
 					reputationBarText.text(playerRep + ' / ' + totalRep + ' (' + Math.floor(pct) + '%)');

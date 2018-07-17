@@ -9,6 +9,31 @@
         "standingTable": "friend"
     },
     {
+        "name": "Corbyn",
+        "id": 2100,
+        "standingTable": "friend"
+    },
+    {
+        "name": "Sha'leth",
+        "id": 2101,
+        "standingTable": "friend"
+    },
+    {
+        "name": "Impus",
+        "id": 2102,
+        "standingTable": "friend"
+    },
+    {
+        "name": "Ilyssia of the Waters",
+        "id": 2097,
+        "standingTable": "friend"
+    },
+    {
+        "name": "Keeper Raynae",
+        "id": 2098,
+        "standingTable": "friend"
+    },
+    {
         "name": "Shattered Sun Offensive",
         "id": 1077
     }

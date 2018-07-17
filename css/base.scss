@@ -429,6 +429,14 @@ body {
 						border-radius: 20px;
 					}
 
+					.warning {
+						color: #ff4040;
+
+						&::before {
+							content: "Warning: ";
+						}
+					}
+
 					.breakdown {
 						margin-top: 15px;
 						padding: 0 40px;

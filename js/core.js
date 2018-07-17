@@ -530,7 +530,7 @@ $(function() {
 
 							step.find('[data-total]').each(function() {
 								var element = $(this);
-								element.text(element.text().replace('%d', 0));
+								element.text(element.attr('data-text').replace('%d', 0));
 							});
 						} else {
 							var standingType = defaultValue(reputation.standingTable, 'basic');

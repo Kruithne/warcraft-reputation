@@ -480,7 +480,7 @@ $(function() {
 					var guideContent = guide.find('.guide').first();
 
 					// Add reputation bar to the top.
-					var reputationBar = $('<div/>').prependTo(guideContent).addClass('repuation-pct-bar');
+					var reputationBar = $('<div/>').prependTo(guideContent).addClass('reputation-pct-bar');
 					var reputationHeader = $('<h1/>').text('Standing').addClass('reputation-header').prependTo(guideContent);
 					var reputationBarInner = reputationBar.createFrame('inner');
 					var reputationBarText = reputationBar.createFrame('shadow');

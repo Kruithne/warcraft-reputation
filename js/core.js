@@ -1,6 +1,4 @@
 $(function() {
-	var DEFAULT_MAX_STANDING = 7;
-
 	var isPerformingLookup = false;
 	var characterReputations = null;
 	var characterData = null;
@@ -363,11 +361,13 @@ $(function() {
 			icon.css('background-image', 'url(images/cards/' + reputation.slug + '.jpg)');
 			title.text(reputation.name);
 
+			var standingType = standingTypes[defaultValue(reputation.standingTable, 'basic')];
+
 			// Set the reputation data to default if the player has not encountered it.
 			if (typeof playerState === 'undefined')
-				playerState = characterReputations[reputation.id] = standingTypes[defaultValue(reputation.standingTable, 'basic')].default;
+				playerState = characterReputations[reputation.id] = standingType.default;
 
-			if (playerState.standing >= (defaultValue(reputation.maxStanding, DEFAULT_MAX_STANDING))) {
+			if (playerState.standing >= (defaultValue(reputation.maxStanding, standingType.stages.length))) {
 				status.text('Complete');
 				nPlayerReputations++;
 			} else {

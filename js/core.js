@@ -6,77 +6,79 @@ $(function() {
 	var characterData = null;
 	var rosterData = null;
 
-	var defaultStandings = {
+	var standingTypes = {
 		basic: {
-			standing: 3,
-			value: 0
+			stages: [
+				36000, // Hated
+				3000, // Hostile
+				3000, // Unfriendly
+				3000, // Neutral
+				6000, // Friendly
+				12000, // Honored
+				21000 // Revered
+			],
+
+			ranks: {
+				0: 'Hated',
+				36000: 'Hostile',
+				39000: 'Unfriendly',
+				42000: 'Neutral',
+				45000: 'Friendly',
+				51000: 'Honored',
+				63000: 'Revered',
+				84000: 'Exalted'
+			},
+
+			default: {
+				standing: 3,
+				value: 0
+			}
 		},
 
 		bodyguard: {
-			standing: 3,
-			value: 0
+			stages: [
+				0,
+				0,
+				0,
+				3000, // Bodyguard
+				6000, // Bodyguard /Wingman
+				11000 // Wingman / Personal Wingman
+			],
+
+			ranks:  {
+				0: 'Bodyguard',
+				10000: 'Wingman',
+				20000: 'Personal Wingman'
+			},
+
+			default: {
+				standing: 3,
+				value: 0
+			}
 		},
 
 		friend: {
-			standing: 0,
-			value: 0
-		}
-	};
+			stages: [
+				8400, // Stranger
+				8400, // Acquaintance
+				8400, // Buddy
+				8400, // Friend
+				8400 // Good Friend
+			],
 
-	var standings = {
-		basic: [
-			36000, // Hated
-			3000, // Hostile
-			3000, // Unfriendly
-			3000, // Neutral
-			6000, // Friendly
-			12000, // Honored
-			21000 // Revered
-		],
+			ranks: {
+				0: 'Stranger',
+				8400: 'Acquaintance',
+				16800: 'Buddy',
+				25200: 'Friend',
+				33600: 'Good Friend',
+				42000: 'Best Friend'
+			},
 
-		bodyguard: [
-			0,
-			0,
-			0,
-			3000, // Bodyguard
-			6000, // Bodyguard /Wingman
-			11000 // Wingman / Personal Wingman
-		],
-
-		friend: [
-			8400, // Stranger
-			8400, // Acquaintance
-			8400, // Buddy
-			8400, // Friend
-			8400 // Good Friend
-		]
-	};
-
-	var standingRanks = {
-		basic: {
-			0: 'Hated',
-			36000: 'Hostile',
-			39000: 'Unfriendly',
-			42000: 'Neutral',
-			45000: 'Friendly',
-			51000: 'Honored',
-			63000: 'Revered',
-			84000: 'Exalted'
-		},
-
-		bodyguard: {
-			0: 'Bodyguard',
-			10000: 'Wingman',
-			20000: 'Personal Wingman'
-		},
-
-		friend: {
-			0: 'Stranger',
-			8400: 'Acquaintance',
-			16800: 'Buddy',
-			25200: 'Friend',
-			33600: 'Good Friend',
-			42000: 'Best Friend'
+			default: {
+				standing: 0,
+				value: 0
+			}
 		}
 	};
 
@@ -363,7 +365,7 @@ $(function() {
 
 			// Set the reputation data to default if the player has not encountered it.
 			if (typeof playerState === 'undefined')
-				playerState = characterReputations[reputation.id] = defaultStandings[defaultValue(reputation.standingTable, 'basic')];
+				playerState = characterReputations[reputation.id] = standingTypes[defaultValue(reputation.standingTable, 'basic')].default;
 
 			if (playerState.standing >= (defaultValue(reputation.maxStanding, DEFAULT_MAX_STANDING))) {
 				status.text('Complete');
@@ -473,8 +475,8 @@ $(function() {
 
 					// Calculate reputation progress/values.
 					var standingType = defaultValue(reputation.standingTable, 'basic');
-					var standingTable = standings[standingType];
-					var standingRanksTable = standingRanks[standingType];
+					var standingTable = standingTypes[standingType].stages;
+					var standingRanksTable = standingTypes[standingType].ranks;
 
 					var totalRep = 0;
 					var playerRep = playerState.value;
@@ -532,7 +534,7 @@ $(function() {
 							});
 						} else {
 							var standingType = defaultValue(reputation.standingTable, 'basic');
-							var standingTable = standings[standingType];
+							var standingTable = standingTypes[standingType].stages;
 
 							var totalStepRep = 0;
 							var playerStepRep = 0;

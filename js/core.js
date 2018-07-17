@@ -289,6 +289,13 @@ $(function() {
 
 					element.text(element.attr('data-text').replace('%d', Math.ceil(stepNeededRep / value)));
 				});
+
+				step.find('[data-tally]').each(function() {
+					var element = $(this);
+					var value = applyModifiers(parseInt(element.attr('data-tally')), element.attr('data-filter'));
+
+					element.text(parseInt(element.attr('data-tally-qty')) * Math.ceil(stepNeededRep / value));
+				});
 			}
 		});
 	};

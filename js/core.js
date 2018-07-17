@@ -542,6 +542,8 @@ $(function() {
 								var element = $(this);
 								element.text(element.attr('data-text').replace('%d', 0));
 							});
+
+							step.find('[data-tally]').text(0);
 						} else {
 							var standingType = defaultValue(reputation.standingTable, 'basic');
 							var standingTable = standingTypes[standingType].stages;

@@ -287,7 +287,13 @@ $(function() {
 					var element = $(this);
 					var value = applyModifiers(parseInt(element.attr('data-total')), element.attr('data-filter'));
 
-					element.text(element.attr('data-text').replace('%d', Math.ceil(stepNeededRep / value)));
+					var calculated = Math.ceil(stepNeededRep / value);
+					var text = element.attr('data-text');
+
+					if (typeof text !== 'undefined')
+						element.text(text.replace('%d', calculated));
+					else
+						element.text(calculated);
 				});
 
 				step.find('[data-tally]').each(function() {
@@ -540,7 +546,12 @@ $(function() {
 
 							step.find('[data-total]').each(function() {
 								var element = $(this);
-								element.text(element.attr('data-text').replace('%d', 0));
+								var text = element.attr('data-text');
+
+								if (typeof text !== 'undefined')
+									element.text(text.replace('%d', '0'));
+								else
+									element.text('0');
 							});
 
 							step.find('[data-tally]').text(0);

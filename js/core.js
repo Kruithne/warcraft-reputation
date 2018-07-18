@@ -129,7 +129,7 @@ $(function() {
 		}
 	];
 
-	var dynamicLinks = ['title', 'item', 'quest', 'achievement'];
+	var dynamicLinks = ['title', 'item', 'quest', 'achievement', 'npc'];
 
 	$.fn.extend({
 		createFrame: function(className) {

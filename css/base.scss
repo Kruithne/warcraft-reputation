@@ -448,10 +448,6 @@ body {
 						color: #f7ffc4;
 					}
 
-					[data-value] {
-						font-weight: bold;
-					}
-
 					b, a {
 						color: gold;
 						text-decoration: none;
@@ -459,6 +455,7 @@ body {
 
 					[data-total], [data-value], [data-tally] {
 						color: #80d2ff;
+						font-weight: bold;
 					}
 				}
 			}

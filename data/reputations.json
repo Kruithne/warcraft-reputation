@@ -36,5 +36,21 @@
     {
         "name": "Shattered Sun Offensive",
         "id": 1077
+    },
+    {
+        "name": "Gadgetzan",
+        "id": 369
+    },
+    {
+        "name": "Booty Bay",
+        "id": 21
+    },
+    {
+        "name": "Ratchet",
+        "id": 470
+    },
+    {
+        "name": "Everlook",
+        "id": 577
     }
 ]

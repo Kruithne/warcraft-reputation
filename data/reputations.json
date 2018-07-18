@@ -52,5 +52,35 @@
     {
         "name": "Everlook",
         "id": 577
+    },
+    {
+        "name": "Silverwing Sentinels",
+        "id": 890,
+        "faction": 0
+    },
+    {
+        "name": "Warsong Outriders",
+        "id": 889,
+        "faction": 1
+    },
+    {
+        "name": "The League of Arathor",
+        "id": 509,
+        "faction": 0
+    },
+    {
+        "name": "The Defilers",
+        "id": 510,
+        "faction": 1
+    },
+    {
+        "name": "Stormpike Guard",
+        "id": 730,
+        "faction": 0
+    },
+    {
+        "name": "Frostwolf Clan",
+        "id": 729,
+        "faction": 1
     }
 ]

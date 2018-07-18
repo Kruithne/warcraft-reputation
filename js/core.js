@@ -277,7 +277,7 @@ $(function() {
 			// Update values to reflect modifiers.
 			step.find('[data-value]').each(function() {
 				var elem = $(this);
-				elem.text(applyModifiers(parseInt(elem.attr('data-value')), elem.attr('data-filter')));
+				elem.text(applyModifiers(parseFloat(elem.attr('data-value')), elem.attr('data-filter')));
 			});
 
 			if (playerState.standing < endStanding) {

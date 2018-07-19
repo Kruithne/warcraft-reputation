@@ -582,7 +582,7 @@ $(function() {
 					// Render maps
 					guide.find('.location').each(function() {
 						var map = $(this);
-						map.css('background-image', 'url(images/maps/' + map.attr('data-map') + '.jpg)');
+						map.css('background-image', 'url(images/maps/' + map.attr('data-map') + '.png)');
 					});
 
 					// Expand the first non-completed stage.

@@ -38,9 +38,9 @@ $(function() {
 				0,
 				0,
 				0,
-				3000, // Bodyguard
-				6000, // Bodyguard /Wingman
-				11000 // Wingman / Personal Wingman
+				3000,
+				6000,
+				11000
 			],
 
 			ranks:  {
@@ -52,7 +52,10 @@ $(function() {
 			default: {
 				standing: 3,
 				value: 0
-			}
+			},
+
+			maxStanding: 5,
+			maxStandingValue: 11000
 		},
 
 		friend: {
@@ -270,6 +273,7 @@ $(function() {
 		guide.find('.step').each(function() {
 			var step = $(this);
 			var endStanding = parseInt(step.attr('data-standing-end'));
+			var endStandingValue = parseInt(step.attr('data-standing-end-value'));
 
 			var reputation = rosterData[parseInt(guide.attr('data-reputation-index'))];
 			var playerState = characterReputations[reputation.id];
@@ -280,7 +284,7 @@ $(function() {
 				elem.text(applyModifiers(parseFloat(elem.attr('data-value')), elem.attr('data-filter')));
 			});
 
-			if (playerState.standing < endStanding) {
+			if (playerState.standing < endStanding && (!isNaN(endStandingValue) && playerState.value < endStandingValue)) {
 				var stepNeededRep = parseInt(step.attr('data-rep-needed'));
 
 				step.find('[data-total]').each(function() {
@@ -380,7 +384,10 @@ $(function() {
 			if (typeof playerState === 'undefined')
 				playerState = characterReputations[reputation.id] = standingType.default;
 
-			if (playerState.standing >= (defaultValue(reputation.maxStanding, standingType.stages.length))) {
+			var maxStanding = defaultValue(standingType.maxStanding, standingType.stages.length);
+			var maxStandingValue = defaultValue(standingType.maxStandingValue, null);
+
+			if (playerState.standing >= maxStanding && (maxStandingValue === null || playerState.value >= maxStandingValue)) {
 				status.text('Complete');
 				nPlayerReputations++;
 			} else {

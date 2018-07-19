@@ -582,7 +582,7 @@ $(function() {
 					// Render maps
 					guide.find('.location').each(function() {
 						var map = $(this);
-						map.css('background-image', 'url(images/maps/' + map.attr('data-map') + '.png)');
+						map.css('background-image', 'url(images/maps/' + map.attr('data-map') + '.jpg)');
 					});
 
 					// Expand the first non-completed stage.
@@ -606,7 +606,7 @@ $(function() {
 					// Render header icons.
 					guide.find('h4[data-header]').each(function() {
 						var header = $(this);
-						header.css('background-image', 'url(images/headers/header-' + header.attr('data-header') + '.jpg)');
+						header.css('background-image', 'url(images/headers/header-' + header.attr('data-header') + '.png)');
 					});
 
 					// Create dynamic links.

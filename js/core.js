@@ -603,6 +603,12 @@ $(function() {
 						}
 					});
 
+					// Render header icons.
+					guide.find('h4[data-header]').each(function() {
+						var header = $(this);
+						header.css('background-image', 'url(images/headers/header-' + header.attr('data-header') + '.jpg)');
+					});
+
 					// Create dynamic links.
 					for (var l = 0; l < dynamicLinks.length; l++) {
 						var linkType = dynamicLinks[l];

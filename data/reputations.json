@@ -1,5 +1,9 @@
 [
     {
+        "name": "Guild",
+        "id": 1168
+    },
+    {
         "name": "Army of the Light",
         "id": 2165
     },
@@ -12,8 +16,33 @@
         "id": 2045
     },
     {
-        "name": "Guild",
-        "id": 1168
+        "name": "Court of Farondis",
+        "id": 1900
+    },
+    {
+        "name": "Dreamweavers",
+        "id": 1883
+    },
+    {
+        "name": "Highmountain Tribe",
+        "id": 1828
+    },
+    {
+        "name": "The Nightfallen",
+        "id": 1859
+    },
+    {
+        "name": "The Wardens",
+        "id": 1894
+    },
+    {
+        "name": "Valarjar",
+        "id": 1948
+    },
+    {
+        "name": "Conjurer Margoss",
+        "id": 1975,
+        "standingTable": "friend"
     },
     {
         "name": "Akule Riverhorn",
@@ -46,8 +75,528 @@
         "standingTable": "friend"
     },
     {
+        "name": "Talon's Vengeance",
+        "id": 2018
+    },
+    {
+        "name": "Hand of the Prophet",
+        "id": 1847,
+        "faction": 0
+    },
+    {
+        "name": "Vol'jin's Headhunters",
+        "id": 1848,
+        "faction": 1
+    },
+    {
+        "name": "Order of the Awakened",
+        "id": 1849,
+    },
+    {
+        "name": "The Saberstalkers",
+        "id": 1850
+    },
+    {
+        "name": "Arakkoa Outcasts",
+        "id": 1515
+    },
+    {
+        "name": "Council of Exarchs",
+        "id": 1731,
+        "faction": 0
+    },
+    {
+        "name": "Frostwolf Orcs",
+        "id": 1445,
+        "faction": 1
+    },
+    {
+        "name": "Sha'tari Defense",
+        "id": 1710,
+        "faction": 0
+    },
+    {
+        "name": "Laughing Skull Orcs",
+        "id": 1708,
+        "faction": 1
+    },
+    {
+        "name": "Steamwheedle Preservation Society",
+        "id": 1711
+    },
+    {
+        "name": "Wyrnn's Vanguard",
+        "id": 1682,
+        "faction": 0
+    },
+    {
+        "name": "Vol'jin's Spear",
+        "id": 1681,
+        "faction": 1
+    },
+    {
+        "name": "Defender Illona",
+        "id": 1738,
+        "standingTable": "bodyguard",
+        "faction": 0
+    },
+    {
+        "name": "Aeda Brightdawn",
+        "id": 1740,
+        "standingTable": "bodyguard",
+        "faction": 0
+    },
+    {
+        "name": "Delvar Ironfist",
+        "id": 1733,
+        "standingTable": "bodyguard",
+        "faction": 0
+    },
+    {
+        "name": "Vivianne",
+        "id": 1739,
+        "standingTable": "bodyguard",
+        "faction": 0
+    },
+    {
+        "name": "Leorajh",
+        "id": 1741,
+        "standingTable": "bodyguard"
+    },
+    {
+        "name": "Talonpriest Ishaal",
+        "id": 1737,
+        "standingTable": "bodyguard"
+    },
+    {
+        "name": "Tormmok",
+        "id": 1736,
+        "standingTable": "bodyguard"
+    },
+    {
+        "name": "Emperor Shaohao",
+        "id": 1492
+    },
+    {
+        "name": "Golden Lotus",
+        "id": 1269
+    },
+    {
+        "name": "Kirin Tor Offensive",
+        "id": 1387,
+        "faction": 0
+    },
+    {
+        "name": "Sunreaver Onslaught",
+        "id": 1388,
+        "faction": 1
+    },
+    {
+        "name": "Operation: Shieldwall",
+        "id": 1376,
+        "faction": 0
+    },
+    {
+        "name": "Dominance Offensive",
+        "id": 1375,
+        "faction": 1
+    },
+    {
+        "name": "Order of the Cloud Serpent",
+        "id": 1271
+    },
+    {
+        "name": "Shado-Pan",
+        "id": 1270
+    },
+    {
+        "name": "Shado-Pan Assault",
+        "id": 1435
+    },
+    {
+        "name": "The August Celestials",
+        "id": 1341
+    },
+    {
+        "name": "The Black Prince",
+        "id": 1359
+    },
+    {
+        "name": "The Klaxxi",
+        "id": 1337
+    },
+    {
+        "name": "The Lorewalkers",
+        "id": 1345
+    },
+    {
+        "name": "The Angler's",
+        "id": 1302
+    },
+    {
+        "name": "Nat Pagle",
+        "id": 1358,
+        "standingTable": "friend"
+    },
+    {
+        "name": "The Tillers",
+        "id": 1272
+    },
+    {
+        "name": "Chee Chee",
+        "id": 1277,
+        "standingTable": "friend"
+    },
+    {
+        "name": "Ella",
+        "id": 1275,
+        "standingTable": "friend"
+    },
+    {
+        "name": "Farmer Fung",
+        "id": 1283,
+        "standingTable": "friend"
+    },
+    {
+        "name": "Fish Fellreed",
+        "id": 1282,
+        "standingTable": "friend"
+    },
+    {
+        "name": "Gind Mudclaw",
+        "id": 1281,
+        "standingTable": "friend"
+    },
+    {
+        "name": "Haohan Mudclaw",
+        "id": 1279,
+        "standingTable": "friend"
+    },
+    {
+        "name": "Jogu the Drunk",
+        "id": 1273,
+        "standingTable": "friend"
+    },
+    {
+        "name": "Old Hillpaw",
+        "id": 1276,
+        "standingTable": "friend"
+    },
+    {
+        "name": "Sho",
+        "id": 1278,
+        "standingTable": "friend"
+    },
+    {
+        "name": "Tina Mudclaw",
+        "id": 1280,
+        "standingTable": "friend"
+    },
+    {
+        "name": "Avengers of Hyjal",
+        "id": 1204
+    },
+    {
+        "name": "Baradin's Wardens",
+        "id": 1177,
+        "faction": 0
+    },
+    {
+        "name": "Hellscream's Reach",
+        "id": 1178,
+        "faction": 1
+    },
+    {
+        "name": "Guardians of Hyjal",
+        "id": 1158
+    },
+    {
+        "name": "Ramkahen",
+        "id": 1173
+    },
+    {
+        "name": "The Earthen Ring",
+        "id": 1135
+    },
+    {
+        "name": "Wildhammer Clan",
+        "id": 1174,
+        "faction": 0
+    },
+    {
+        "name": "Dragonmaw Clan",
+        "id": 1172,
+        "faction": 1
+    },
+    {
+        "name": "Therazane",
+        "id": 1171
+    },
+    {
+        "name": "Argent Crusade",
+        "id": 1106
+    },
+    {
+        "name": "Kirin Tor",
+        "id": 1090
+    },
+    {
+        "name": "Knights of the Ebon Blade",
+        "id": 1098
+    },
+    {
+        "name": "The Ashen Verdict",
+        "id": 1156
+    },
+    {
+        "name": "The Kalu'ak",
+        "id": 1073
+    },
+    {
+        "name": "The Sons of Hodir",
+        "id": 1119
+    },
+    {
+        "name": "The Wyrmrest Accord",
+        "id": 1091
+    },
+    {
+        "name": "The Alliance Vanguard",
+        "id": 1037,
+        "faction": 0
+    },
+    {
+        "name": "Explorer's League",
+        "id": 1068,
+        "faction": 0
+    },
+    {
+        "name": "The Frostborn",
+        "id": 1126,
+        "faction": 0
+    },
+    {
+        "name": "The Silver Covenant",
+        "id": 1094,
+        "faction": 0
+    },
+    {
+        "name": "Valiance Expedition",
+        "id": 1050,
+        "faction": 0
+    },
+    {
+        "name": "Horde Expedition",
+        "id": 1052,
+        "faction": 1
+    },
+    {
+        "name": "The Hand of Vengeance",
+        "id": 1067,
+        "faction": 1
+    },
+    {
+        "name": "The Taunka",
+        "id": 1064,
+        "faction": 1
+    },
+    {
+        "name": "Warsong Offensive",
+        "id": 1085,
+        "faction": 1
+    },
+    {
+        "name": "The Sunreavers",
+        "id": 1124,
+        "faction": 1
+    },
+    {
+        "name": "Ashtongue Deathsworn",
+        "id": 1012
+    },
+    {
+        "name": "Cenarion Expedition",
+        "id": 942
+    },
+    {
+        "name": "Honor Hold",
+        "faction": 0,
+        "id": 946
+    },
+    {
+        "name": "Thrallmar",
+        "faction": 1,
+        "id": 947
+    },
+    {
+        "name": "Keepers of Time",
+        "id": 989
+    },
+    {
+        "name": "Kurenai",
+        "id": 978,
+        "faction": 0
+    },
+    {
+        "name": "The Mag'har",
+        "id": 941,
+        "faction": 1
+    },
+    {
+        "name": "Ogri'la",
+        "id": 1038
+    },
+    {
+        "name": "Sporeggar",
+        "id": 970
+    },
+    {
+        "name": "The Consortium",
+        "id": 933
+    },
+    {
+        "name": "The Scale of the Sands",
+        "id": 990
+    },
+    {
+        "name": "The Violet Eye",
+        "id": 967
+    },
+    {
+        "name": "Lower City",
+        "id": 1011
+    },
+    {
+        "name": "Sha'tari Skyguard",
+        "id": 1031
+    },
+    {
+        "name": "The Aldor",
+        "id": 932
+    },
+    {
+        "name": "The Scryers",
+        "id": 934
+    },
+    {
+        "name": "The Sha'tar",
+        "id": 935
+    },
+    {
         "name": "Shattered Sun Offensive",
         "id": 1077
+    },
+    {
+        "name": "Bloodsail Buccaneers",
+        "id": 87
+    },
+    {
+        "name": "Brood of Nozdormu",
+        "id": 910
+    },
+    {
+        "name": "Cenarion Circle",
+        "id": 609
+    },
+    {
+        "name": "Darkmoon Faire",
+        "id": 909
+    },
+    {
+        "name": "Hydraxian Waterlords",
+        "id": 749
+    },
+    {
+        "name": "Ravenholdt",
+        "id": 349
+    },
+    {
+        "name": "Thorium Brotherhood",
+        "id": 59
+    },
+    {
+        "name": "Timbermaw Hold",
+        "id": 576
+    },
+    {
+        "name": "Darnassus",
+        "id": 69,
+        "faction": 0
+    },
+    {
+        "name": "Exodar",
+        "id": 930,
+        "faction": 0
+    },
+    {
+        "name": "Gilneas",
+        "id": 1134,
+        "faction": 0
+    },
+    {
+        "name": "Gnomeregan",
+        "id": 54,
+        "faction": 0
+    },
+    {
+        "name": "Ironforge",
+        "id": 47,
+        "faction": 0
+    },
+    {
+        "name": "Stormwind",
+        "id": 72,
+        "faction": 0
+    },
+    {
+        "name": "Tushui Pandaren",
+        "id": 1353,
+        "faction": 0
+    },
+    {
+        "name": "Undercity",
+        "id": 68,
+        "faction": 1
+    },
+    {
+        "name": "Orgrimmar",
+        "id": 76,
+        "faction": 1
+    },
+    {
+        "name": "Silvermoon City",
+        "id": 911,
+        "faction": 1
+    },
+    {
+        "name": "Bilgewater Cartel",
+        "id": 1133,
+        "faction": 1
+    },
+    {
+        "name": "Thunder Bluff",
+        "id": 81,
+        "faction": 1
+    },
+    {
+        "name": "Darkspear Trolls",
+        "id": 530,
+        "faction": 1
+    },
+    {
+        "name": "Houjin Pandaren",
+        "id": 1352,
+        "faction": 1
+    },
+    {
+        "name": "Bizmo's Brawlpub",
+        "id": 2011,
+        "faction": 0
+    },
+    {
+        "name": "Brawl'gar Arena",
+        "id": 2010,
+        "faction": 1
     },
     {
         "name": "Gadgetzan",

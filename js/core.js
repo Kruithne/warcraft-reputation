@@ -318,7 +318,7 @@ $(function() {
 
 		link.text(elem.text());
 
-		if (!elem.hasClass('reward'))
+		if (typeof elem.attr('data-icon') === 'undefined')
 			elem.text('');
 
 		elem.append(link);

@@ -144,7 +144,7 @@
         "name": "Aeda Brightdawn",
         "id": 1740,
         "standingTable": "bodyguard",
-        "faction": 0
+        "faction": 1
     },
     {
         "name": "Delvar Ironfist",
@@ -156,7 +156,7 @@
         "name": "Vivianne",
         "id": 1739,
         "standingTable": "bodyguard",
-        "faction": 0
+        "faction": 1
     },
     {
         "name": "Leorajh",

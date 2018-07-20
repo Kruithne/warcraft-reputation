@@ -596,7 +596,7 @@ $(function() {
 					steps.not('.complete').first().addClass('expanded');
 
 					// Render icons.
-					guide.find('.rewards li').each(function() {
+					guide.find('.rewards').find('li').each(function() {
 						var item = $(this);
 						var faction = item.attr('data-reward-faction');
 

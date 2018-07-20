@@ -596,7 +596,7 @@ $(function() {
 					steps.not('.complete').first().addClass('expanded');
 
 					// Render icons.
-					guide.find('.reward').each(function() {
+					guide.find('li').each(function() {
 						var item = $(this);
 						var faction = item.attr('data-reward-faction');
 
@@ -666,9 +666,9 @@ $(function() {
 	});
 
 	// Tooltip listeners.
-	doc.on('mouseenter', '.reward', function() {
+	doc.on('mouseenter', '.rewards li', function() {
 		$(this).addClass('tooltip');
-	}).on('mouseleave', '.reward', function() {
+	}).on('mouseleave', '.rewards li', function() {
 		$(this).removeClass('tooltip');
 	});
 

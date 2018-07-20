@@ -284,7 +284,7 @@ $(function() {
 				elem.text(applyModifiers(parseFloat(elem.attr('data-value')), elem.attr('data-filter')));
 			});
 
-			if (playerState.standing < endStanding && (!isNaN(endStandingValue) && playerState.value < endStandingValue)) {
+			if (playerState.standing < endStanding && (isNaN(endStandingValue) || playerState.value < endStandingValue)) {
 				var stepNeededRep = parseInt(step.attr('data-rep-needed'));
 
 				step.find('[data-total]').each(function() {

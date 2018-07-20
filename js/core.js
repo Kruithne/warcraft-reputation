@@ -587,7 +587,7 @@ $(function() {
 					updateDynamicValues(guide);
 
 					// Render maps
-					guide.find('.location').each(function() {
+					guide.find('[data-map]').each(function() {
 						var map = $(this);
 						map.css('background-image', 'url(images/maps/' + map.attr('data-map') + '.jpg)');
 					});

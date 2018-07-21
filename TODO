@@ -1,0 +1,111 @@
+- Add message on the page indicating that blue values are dynamically calculated.
+- Add message informing player they can expand reputations to view guides?
+- Apply gradient masking directly to header images for browser compatibility.
+- Sort margin overlap on iOS Safari.
+- Add support for counter reputation (Scryers/Aldor)
+- Add in the missing centaur factions that became available in 8.0.1
+
+- Reputations:
+	Hand of the Prophet (Alliance)
+	Vol'jin's Headhunters (Horde)
+	Order of the Awakened
+	The Saberstalkers
+	Arakkoa Outcasts
+	Coucil of Exarchs (Alliance)
+	Frostwolf Orcs (Horde)
+	Sha'tari Defense (Alliance)
+	Laughing Skull Orcs (Horde)
+	Steamwheedle Preservation Society
+	Wyrnn's Vanguard (Alliance)
+	Vol'jins Spear (Horde)
+
+	Emperor Shaohao
+	Golden Lotus
+	Kirin Tor Offensive (Alliance)
+	Sunreaver Onslaught (Horde)
+	Operation: Shieldwall (Alliance)
+	Dominance Offensive (Horde)
+	Order of the Cloud Serpent
+	Shado-Pan
+	Shado-Pan Assault
+	The August Celestials
+	The Black Prince
+	The Klaxxi
+	The Lorewalkers
+	The Angler's
+	Nat Pagle
+	The Tillers
+
+	Avenger's of Hyjal
+	Baradin's Wardens
+	Guardians of Hyjal
+	Ramkahen
+	The Earthern Ring
+	Wildhammer Clan (Alliance)
+	Dragonmaw Clan (Horde)
+	Therazane
+
+	Argent Crusade
+	Kirin Tor
+	Knights of the Ebon Blade
+	The Ashen Verdict
+	The Kalu'ak
+	The Sons of Hodir
+
+	The Alliance Vanguard (Alliance)
+	Explorer's League (Alliance)
+	The Frostborn (Alliance)
+	The Silver Covenant (Alliance)
+	Valiance Expedition (Alliance)
+
+	Horde Expedition (Horde)
+	The Hand of Vengeance (Horde)
+	The Taunka (Horde)
+	Warsong Offensive (Horde)
+	The Sunreavers (Horde)
+
+	Ashtongue Deathsworn
+	Cenarion Expedition
+	Honor Hold (Alliance)
+	Thrallmar (Horde)
+	Keepers of Time
+	Kurenai (Alliance)
+	The Mag'har (Horde)
+	Ogri'la
+	Sporeggar
+	The Consortium
+	The Scale of the Sands
+	The Violet Eye
+	Lower City
+	Sha'tari Skyguard
+	The Aldor
+	The Scryers
+	The Sha'tar
+
+	Bloodsail Buccaneers
+	Brood of Nozdormu
+	Cenarion Circle
+	Darkmoon Faire
+	Hydraxian Waterlords
+	Ravenholdt
+	Thorium Brotherhood
+	Timbermaw Hold
+
+	Darnassus (Alliance)
+	Exodar (Alliance)
+	Gilneas (Alliance)
+	Gnomeregan (Alliance)
+	Ironforge (Alliance)
+	Stormwind City (Alliance)
+	Tushui Pandaren (Alliance)
+
+	Orgrimmar (Horde)
+	Undercity (Horde)
+	Bilgewater Cartel (Horde)
+	Thunder Bluff (Horde)
+	Darkspear Trolls (Horde)
+	Silvermoon City (Horde)
+	Houjin Pandaren (Horde)
+
+	Bizmo's Brawlpub (Alliance)
+	Brawl'gar Arena (Horde)

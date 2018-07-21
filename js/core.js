@@ -174,8 +174,19 @@ $(function() {
 	var applyModifiers = function(value, filter) {
 		for (var i = 0; i < reputationModifiers.length; i++) {
 			var modifier = reputationModifiers[i];
-			if (modifier.active && (typeof modifier.restrict === 'undefined' || modifier.restrict === filter))
-				value += value * modifier.factor;
+
+			if (modifier.active) {
+				var restricted = typeof modifier.restrict !== 'undefined';
+
+				if (restricted && typeof filter !== 'undefined') {
+					var filters = filter.split(' ');
+					if (filters.includes(modifier.restrict))
+						restricted = false;
+				}
+
+				if (!restricted)
+					value += value * modifier.factor;
+			}
 		}
 
 		return Math.round(value * 10) / 10;

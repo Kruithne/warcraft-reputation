@@ -179,6 +179,8 @@ $(function() {
 	var reputationDisplay = $('#reputation-display');
 
 	var applyModifiers = function(value, filter) {
+		var newValue = value;
+
 		for (var i = 0; i < reputationModifiers.length; i++) {
 			var modifier = reputationModifiers[i];
 
@@ -192,11 +194,11 @@ $(function() {
 				}
 
 				if (!restricted)
-					value += value * modifier.factor;
+					newValue += value * modifier.factor;
 			}
 		}
 
-		return Math.round(value * 10) / 10;
+		return Math.round(newValue * 10) / 10;
 	};
 
 	var setStatus = function(text) {

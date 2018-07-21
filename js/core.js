@@ -129,6 +129,13 @@ $(function() {
 			"factor": 0.15,
 			"icon": "inv_guild_standard_alliance_c",
 			"restrict": "source-kill"
+		},
+		{
+			"name": "Trading Pact",
+			"desc": "Draenor Garrison Perk",
+			"factor": 0.2,
+			"icon": "achievement_reputation_01",
+			"restrict": "source-draenor"
 		}
 	];
 

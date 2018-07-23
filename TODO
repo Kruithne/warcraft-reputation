@@ -3,7 +3,6 @@
 - Apply gradient masking directly to header images for browser compatibility.
 - Sort margin overlap on iOS Safari.
 - Add support for counter reputation (Scryers/Aldor)
-- Add in the missing centaur factions that became available in 8.0.1
 - Fix Chromie scaling and add her to the list.
 
 - Reputations:

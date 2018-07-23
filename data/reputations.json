@@ -599,6 +599,14 @@
         "faction": 1
     },
     {
+        "name": "Magram Clan Centaur",
+        "id": 93
+    },
+    {
+        "name": "Gelkis Clan Centaur",
+        "id": 92
+    },
+    {
         "name": "Gadgetzan",
         "id": 369
     },

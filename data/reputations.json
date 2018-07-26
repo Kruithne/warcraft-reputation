@@ -125,16 +125,6 @@
         "id": 1711
     },
     {
-        "name": "Wyrnn's Vanguard",
-        "id": 1682,
-        "faction": 0
-    },
-    {
-        "name": "Vol'jin's Spear",
-        "id": 1681,
-        "faction": 1
-    },
-    {
         "name": "Defender Illona",
         "id": 1738,
         "standingTable": "bodyguard",

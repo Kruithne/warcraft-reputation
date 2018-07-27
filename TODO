@@ -4,6 +4,7 @@
 - Sort margin overlap on iOS Safari.
 - Add support for counter reputation (Scryers/Aldor)
 - Fix Chromie scaling and add her to the list.
+- Create header for Huojin Pandaren
 
 - Reputations:
 	Emperor Shaohao
@@ -77,22 +78,6 @@
 	Ravenholdt
 	Thorium Brotherhood
 	Timbermaw Hold
-
-	Darnassus (Alliance)
-	Exodar (Alliance)
-	Gilneas (Alliance)
-	Gnomeregan (Alliance)
-	Ironforge (Alliance)
-	Stormwind City (Alliance)
-	Tushui Pandaren (Alliance)
-
-	Orgrimmar (Horde)
-	Undercity (Horde)
-	Bilgewater Cartel (Horde)
-	Thunder Bluff (Horde)
-	Darkspear Trolls (Horde)
-	Silvermoon City (Horde)
-	Houjin Pandaren (Horde)
 
 	Bizmo's Brawlpub (Alliance)
 	Brawl'gar Arena (Horde)
